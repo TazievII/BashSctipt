@@ -15,7 +15,7 @@ cat > ${FILENAME}_report.out << EOF
 Дата: $CURRENT_DATE
 EOF
 mkdir -p archives
-ARCHIVENAME=${FILENAME}.tar
+ARCHIVENAME=${FILENAME}.tar.gz
 if [ ! -f "archives/${ARCHIVENAME}" ]; then
         tar -czf archives/${ARCHIVENAME} ${FILENAME}_failed.out ${FILENAME}_running.out ${FILENAME}_report.out
         rm -f ${FILENAME}_running.out ${FILENAME}_failed.out ${FILENAME}_report.out list.out
