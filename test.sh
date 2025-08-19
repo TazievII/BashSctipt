@@ -14,6 +14,7 @@ cat > ${FILENAME}_report.out << EOF
 Имя системного пользователя: $USERNAME
 Дата: $CURRENT_DATE
 EOF
+chmod a+r ${FILENAME}_report.out
 mkdir -p archives
 ARCHIVENAME=${FILENAME}.tar.gz
 if [ ! -f "archives/${ARCHIVENAME}" ]; then
